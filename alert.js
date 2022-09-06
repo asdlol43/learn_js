@@ -1,11 +1,14 @@
-function pow(x,n) {
-    let result = x**n
-    return result;
+"use strict";
+
+let ask = (question, yes, no) => {
+    if (confirm(question)) yes()
+    else no();
 }
-
-x = +prompt ('Какое число?', )
-n = +prompt ('Какая степень?', )
-
-alert (pow (x, n))
+  
+  ask (
+    "Вы согласны?",
+    () => { alert("Вы согласились."); },
+    () => { alert("Вы отменили выполнение."); }
+  );
 
 // https://learn.javascript.ru/function-basics
